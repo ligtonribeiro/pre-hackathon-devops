@@ -32,7 +32,7 @@ jobs:
       - name: Instalação das dependências
         run: npm install
 
-      - name: Instalação das dependências
+      - name: Build
         run: npm run build
 
       - name: Setup Pages
