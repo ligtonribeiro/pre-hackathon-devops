@@ -32,6 +32,9 @@ jobs:
       - name: Instalação das dependências
         run: npm install
 
+      - name: Instalação das dependências
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
