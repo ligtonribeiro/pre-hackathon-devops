@@ -17,11 +17,20 @@ jobs:
     secrets: inherit
 
   deploy:
+    needs: tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Instalação Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Instalação das dependências
+        run: npm install
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
